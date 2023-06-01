@@ -81,9 +81,9 @@ if (!roleUser($_SESSION['user']['id'], ADMIN)) {
                     foreach ($event as $id => $value) {
                         $idEvent[$value['id']] = $value['idDataC'];
                     }
-
+                    
                     foreach ($manager as $id => $value) {
-                        if (isset($idEvent[$value['id']])){
+                        if (isset($idEvent[$value['idUser']])){
                             $idEvent = $idEvent[$value['id']];
                         } else {
                             $idEvent = "";
