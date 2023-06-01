@@ -81,13 +81,14 @@ if (!roleUser($_SESSION['user']['id'], ADMIN)) {
                     foreach ($event as $id => $value) {
                         $idEvent[$value['id']] = $value['idDataC'];
                     }
-                    
+
                     foreach ($manager as $id => $value) {
+                        
+                        $idE = "";
                         if (isset($idEvent[$value['idUser']])){
-                            $idEvent = $idEvent[$value['id']];
-                        } else {
-                            $idEvent = "";
+                            $idE = $idEvent[$value['id']];
                         }
+                        
                         echo '
                             <div onclick="show(this)" class="user" id=' . $value['id'] . '>
                                 <input id=email type=hidden value="' . $value['email'] . '">
@@ -96,7 +97,7 @@ if (!roleUser($_SESSION['user']['id'], ADMIN)) {
                                 <input id=company type=hidden value="' . $value['company'] . '">
                                 <input id=startDate type=hidden value="' . $value['startDate'] . '">
                                 <input id=endDate type=hidden value="' . $value['endDate'] . '">
-                                <input id=idEvent type=hidden value="' . $idEvent . '">
+                                <input id=idEvent type=hidden value="' . $idE . '">
                                 <div class="profile-picture">
                                     <img id=img src="/asset/icon/profile.ico" alt="profile-picture">
                                 </div>
