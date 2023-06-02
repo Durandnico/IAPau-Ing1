@@ -148,3 +148,10 @@ function searchSuggestions() {
 
 // Call the searchSuggestions function when the user input changes
 searchInput.addEventListener('input', searchSuggestions);
+
+function updateInputValue() {
+    var input = document.getElementById("user-search-input");
+    var selectedOption = input.querySelector("option[value='" + input.value + "']");
+    var selectedId = selectedOption.getAttribute("data-id");
+    input.value = selectedId; // Set the input value to the selected ID
+  }

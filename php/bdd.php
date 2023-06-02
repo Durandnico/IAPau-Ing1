@@ -1057,7 +1057,7 @@ function createUser($firstname, $lastname, $password, $phone, $email): int
  * @return true if the student has been inserted successfully
  * @remarks check if a user with the id $userId exists
  */
-function createStudent($idUser, $idGroup, $lvStudy, $school, $city): bool
+function createStudent($idUser, $idGroup = null, $lvStudy, $school, $city): bool
 {
     /* Check if the user exists */
     $request =

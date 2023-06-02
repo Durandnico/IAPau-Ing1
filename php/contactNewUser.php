@@ -1,6 +1,14 @@
 <div id="messagerie-container">
-        <input id="user-search-input" type="text" class="sub-msg" name="sender" placeholder="UserName" value="1" oninput="searchSuggestions()">
-        <datalist id="users-name"></datalist>
+  <input id="user-search-input" type="text" list="user-id" class="sub-msg" name="sender" placeholder="UserName" oninput="updateInputValue()">
+  <datalist id="user-id">
+    <option value="Nicolas" data-id="1">
+    <option value="Matt" data-id="2">
+    <option value="admin" data-id="3">
+    <option value="Lilan" data-id="4">
+    <option value="Lucas" data-id="5">
+    <option value="fromage" data-id="6">
+    <option value="testt" data-id="7">
+  </datalist>
 </div>
 
 
